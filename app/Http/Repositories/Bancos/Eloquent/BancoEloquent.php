@@ -15,10 +15,10 @@ class BancoEloquent implements BancoInterface{
     }
 
     public function get(){
-        return DB::select('select * from tb_banco');
+        return $this->model->get();
     }
     public function getById($id){
-        DB::select('select * from tb_banco where id = '.$id);
+       return $this->model->find($id);
     }
     public function create($banco){
 

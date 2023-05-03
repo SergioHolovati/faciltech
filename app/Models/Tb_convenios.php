@@ -16,6 +16,7 @@ class Tb_convenios extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        "id",
         "codigo",
         "convenio",
         "verba",

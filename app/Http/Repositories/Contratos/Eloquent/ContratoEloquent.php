@@ -16,23 +16,6 @@ class ContratoEloquent implements ContratoInterface{
     }
 
     public function get(){
-        // return DB::table('Tb_contratos')->select("
-        // SELECT 
-        // b.nome,
-        // cn.verba,
-        // c.codigo,
-        // c.data_inclusao,
-        // c.valor,
-        // c.prazo
-        // FROM
-        //     tb_contratos c
-        //         INNER JOIN
-        //     tb_convenio_servicos cs ON c.convenio_servico = cs.id
-        //         INNER JOIN
-        //     tb_convenios cn ON cn.id = cs.convenio_id
-        //         INNER JOIN
-        //     tb_bancos b ON cn.convenio_banco = b.id ");
-
            return DB::table('tb_contratos')
             ->join('tb_convenio_servicos', 'tb_contratos.convenio_servico', '=', 'tb_convenio_servicos.id')
             ->join('tb_convenios', 'tb_convenios.id', '=', 'convenio_id')

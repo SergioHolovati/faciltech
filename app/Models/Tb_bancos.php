@@ -16,6 +16,7 @@ class Tb_bancos extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        "id",
         "codigo",
         "nome"
     ];
